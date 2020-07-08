@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx} % Required for including images
+\usepackage{multicol} % Required for image alignment
+
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+\setlength{\parskip}{1pt} % Stop paragraph indentation
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[semibold]{ebgaramond} % Use the EB Garamond font with a reduced bold weight
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=2.5cm, % Top margin
+	bottom=2.5cm, % Bottom margin
+	left=5cm, % Left margin
+	right=3cm, % Right margin
+}
+
+%----------------------------------------------------------------------------------------
+%	MARGIN CONTENTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{marginnote} % Required to output text in the margin
+\setlength{\marginparwidth}{5cm}
+
+%\renewcommand*{\raggedleftmarginnote}{} % Left-align the years in the margin
+%\setlength{\marginparsep}{-1pt} % Move the margin content closer to the text
+\reversemarginpar % Margin text to be output into the left margin instead of the default right margin
+
+%----------------------------------------------------------------------------------------
+%   NEWCOMMANDS
+%----------------------------------------------------------------------------------------
+
+% New command for adding time to the margin
+\newcommand{\when}[1]{\marginnote{\small{#1}}}
+
+% New command for adding a new entry
+\newcommand{\new}[4]{
+    \medbreak
+    \vspace{3mm}
+    \marginnote{\small #1}
+    \nopagebreak
+    \textbf{#2}\\
+    \nopagebreak
+    \textit{#3}, #4
+    }
+
+% New command for section heading
+\newcommand{\cat}[1]{
+    \bigbreak
+    \vspace{5mm}
+    \pagebreak[1]
+    {\Large\bfseries #1}
+    \nopagebreak
+    }
+
+% New command for skill entry
+\newcommand{\sky}[2]{
+    \vspace{1mm}
+    \marginnote{\small\bfseries #1}
+    #2
+    }
+%----------------------------------------------------------------------------------------
+%	COLORED LINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage[usenames, dvipsnames]{xcolor} % Required for specifying colours by name
+\usepackage[colorlinks]{hyperref} % Required for links
+
+% Set link colours
+\hypersetup{
+	linkcolor=blue,
+	urlcolor=MidnightBlue
+}
